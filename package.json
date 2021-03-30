@@ -34,7 +34,8 @@
 				{
 					"type": "webview",
 					"id": "vscode-pets.petsView",
-					"name": "VSCode pets Pets View"
+					"name": "VSCode pets Pets View",
+					"when": "vscode-pets.position == 'explorer'"
 				}
 			]
 		},
@@ -96,6 +97,15 @@
 						],
 						"default": "nano",
 						"description": "Pet size"
+					},
+					"vscode-pets.position": {
+						"type": "string",
+						"enum": [
+							"panel",
+							"explorer"
+						],
+						"default": "panel",
+						"description": "VSCode pets webview position"
 					}
 				}
 			}
